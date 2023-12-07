@@ -19,7 +19,7 @@
           "price"
         ],
         "x-ep-schema-version-displayname": "",
-        "x-ep-shared": "false",
+        "x-ep-shared": "true",
         "x-ep-application-domain-name": "Online Services",
         "x-ep-schema-state-id": "2",
         "x-ep-schema-id": "hod6gztzokq",
