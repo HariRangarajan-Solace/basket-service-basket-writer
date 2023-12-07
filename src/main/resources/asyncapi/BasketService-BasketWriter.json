@@ -66,8 +66,8 @@
       },
       "RiskyBasket": {
         "x-ep-event-id": "q0xho40ujqv",
-        "x-ep-event-version-displayname": "A basket which has a risk profile associated with it due to some reason like high quantity threshold",
-        "description": "",
+        "x-ep-event-version-displayname": "",
+        "description": "A basket with an associated risk profile  has a risk profile associated with it due to some reason like high quantity threshold",
         "x-ep-application-domain-id": "1kprkakvuo6",
         "schemaFormat": "application/vnd.aai.asyncapi+json;version=2.0.0",
         "x-ep-event-state-name": "DRAFT",
