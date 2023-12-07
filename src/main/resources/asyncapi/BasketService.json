@@ -46,6 +46,24 @@
       }
     },
     "messages": {
+      "RiskyBasket": {
+        "x-ep-event-id": "v7kcwe3jvo4",
+        "x-ep-event-version-displayname": "",
+        "description": "A basket with an associated risk profile  has a risk profile associated with it due to some reason like high quantity threshold",
+        "x-ep-application-domain-id": "1kprkakvuo6",
+        "schemaFormat": "application/vnd.aai.asyncapi+json;version=2.0.0",
+        "x-ep-event-state-name": "DRAFT",
+        "x-ep-shared": "false",
+        "x-ep-application-domain-name": "Online Services",
+        "x-ep-event-version-id": "7dii69jdk38",
+        "payload": {
+          "$ref": "#/components/schemas/Basket"
+        },
+        "x-ep-event-version": "1.0.0",
+        "x-ep-event-name": "RiskyBasket",
+        "contentType": "application/json",
+        "x-ep-event-state-id": "1"
+      },
       "Basket": {
         "x-ep-event-id": "g25qki3qmiq",
         "x-ep-event-version-displayname": "",
@@ -61,24 +79,6 @@
         },
         "x-ep-event-version": "0.1.0",
         "x-ep-event-name": "Basket",
-        "contentType": "application/json",
-        "x-ep-event-state-id": "2"
-      },
-      "RiskyBasket": {
-        "x-ep-event-id": "q0xho40ujqv",
-        "x-ep-event-version-displayname": "",
-        "description": "A basket with an associated risk profile  has a risk profile associated with it due to some reason like high quantity threshold",
-        "x-ep-application-domain-id": "1kprkakvuo6",
-        "schemaFormat": "application/vnd.aai.asyncapi+json;version=2.0.0",
-        "x-ep-event-state-name": "DRAFT",
-        "x-ep-shared": "false",
-        "x-ep-application-domain-name": "Online Services",
-        "x-ep-event-version-id": "qzodnpeia6k",
-        "payload": {
-          "$ref": "#/components/schemas/Basket"
-        },
-        "x-ep-event-version": "0.1.0",
-        "x-ep-event-name": "RiskyBasket",
         "contentType": "application/json",
         "x-ep-event-state-id": "2"
       }
@@ -161,7 +161,7 @@
   "asyncapi": "2.5.0",
   "info": {
     "x-ep-application-version": "1.0.0",
-    "x-ep-application-version-id": "1iik9w68od9",
+    "x-ep-application-version-id": "ygozrycj9d5",
     "x-ep-application-id": "qvi4ud497a5",
     "x-ep-state-name": "DRAFT",
     "title": "Basket Service - Basket Writer (REST proxy)",
