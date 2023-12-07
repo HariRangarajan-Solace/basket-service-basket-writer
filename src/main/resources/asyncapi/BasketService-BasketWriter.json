@@ -46,6 +46,23 @@
       }
     },
     "messages": {
+            "RiskyBasket": {
+                "x-ep-event-id": "0ow84nby9pd",
+                "x-ep-event-version-displayname": "",
+                "description": "A basket which has a risk profile associated with it due to some reason like high quantity threshold",
+                "x-ep-application-domain-id": "1kprkakvuo6",
+                "schemaFormat": "application/vnd.aai.asyncapi+json;version=2.0.0",
+                "x-ep-event-state-name": "DRAFT",
+                "x-ep-shared": "false",
+                "x-ep-application-domain-name": "Online Services",
+                "payload": {
+                    "$ref": "#/components/schemas/Basket"
+                },
+                "x-ep-event-version": "0.1.0",
+                "x-ep-event-name": "RiskyBasket",
+                "contentType": "application/json",
+                "x-ep-event-state-id": "1"
+            },
       "Basket": {
         "x-ep-event-id": "g25qki3qmiq",
         "x-ep-event-version-displayname": "",
@@ -67,6 +84,42 @@
     }
   },
   "channels": {
+        "retail/acme/online/riskybasket/{verb}/v1/{id}": {
+            "publish": {
+                "message": {
+                    "$ref": "#/components/messages/RiskyBasket"
+                }
+            },
+            "parameters": {
+                "verb": {
+                    "schema": {
+                        "type": "string",
+                        "enum": [
+                            "CREATED",
+                            "VALIDATED",
+                            "UPDATED"
+                        ]
+                    },
+                    "x-ep-enum-state-name": "RELEASED",
+                    "x-ep-enum-version-displayname": "",
+                    "x-ep-enum-version": "0.1.0",
+                    "x-ep-enum-name": "verb",
+                    "x-ep-enum-state-id": "2",
+                    "x-ep-application-domain-id": "1kprkakvuo6",
+                    "x-ep-enum-version-id": "bxr3y2gkzcl",
+                    "x-ep-enum-id": "81nsbk6ci3t",
+                    "x-ep-shared": "true",
+                    "x-ep-parameter-name": "verb",
+                    "x-ep-application-domain-name": "Online Services"
+                },
+                "id": {
+                    "schema": {
+                        "type": "string"
+                    },
+                    "x-ep-parameter-name": "id"
+                }
+            }
+        },
     "retail/acme/online/basket/{verb}/v1/{id}": {
       "subscribe": {
         "message": {

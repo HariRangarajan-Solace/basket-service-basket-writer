@@ -29,11 +29,20 @@ public class Application {
 		SpringApplication.run(Application.class);
 	}
 
-	@Scheduled(fixedRate = 5000)
+	@Scheduled(fixedRate = 10000)
 	public void scheduledBasketEvent() {
 		Basket basketTobePosted = createBasketModel();
-		logger.info("Posting Basket event :{}", basketTobePosted);
+		log.info("Posting Basket event :{}", basketTobePosted);
 		sendRetailAcmeOnlineBasketVerbV1Id(basketTobePosted, "CREATED", "11111");
+		if (basketTobePosted.getQuantity() > 5) {
+			log.info("Posting RiskyBasket event :{}", basketTobePosted);
+			sendRetailAcmeOnlineRiskyBasketVerbV1Id(basketTobePosted, "CREATED", basketTobePosted.getId());
+		}
+	}
+
+	public void sendRetailAcmeOnlineRiskyBasketVerbV1Id(Basket payload, String verb, String basketId) {
+		String topic = String.format("retail/acme/online/riskyBasket/%s/v1/%s", verb, basketId);
+		streamBridge.send(topic, payload);
 	}
 
 	private Basket createBasketModel() {
