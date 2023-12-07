@@ -53,7 +53,7 @@
         "x-ep-application-domain-id": "1kprkakvuo6",
         "schemaFormat": "application/vnd.aai.asyncapi+json;version=2.0.0",
         "x-ep-event-state-name": "RELEASED",
-        "x-ep-shared": "false",
+        "x-ep-shared": "true",
         "x-ep-application-domain-name": "Online Services",
         "x-ep-event-version-id": "f4axxbzm6j4",
         "payload": {
